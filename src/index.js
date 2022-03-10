@@ -1,10 +1,35 @@
-import "./scss/styles.scss";
+const timer = document.getElementById("timer");
+const timerDirection = document.getElementById("timer-direction");
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel. Using this to test and set up the base project.
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+//store time till date as milliseconds
+let countDownDate = new Date("march 9, 2022 19:00:00").getTime();
+
+let t = setInterval(() => {
+  //store current date and time
+  let now = new Date().getTime();
+
+  // get the distance between the two dates
+  let distance = countDownDate - now;
+
+  //calculate days, hours, minutes, seconds
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  //check if count down is finished
+  //use < for extra second to see clock at all 0. otherwise use <=
+  if (distance < 0) {
+    //use clearinterval(t) to stop the count.
+    //to not stop dont clear and * by -1 to keep time past point
+    days *= -1;
+    hours *= -1;
+    minutes *= -1;
+    seconds *= -1;
+
+    timerDirection.innerHTML = " Times UP!";
+  }
+
+  //Display results in place holder element
+  timer.innerHTML = `days ${days} hours ${hours} minutes ${minutes} seconds ${seconds}`;
+}, 1000);
