@@ -10,79 +10,84 @@
   </head>
   <body>
     <!--clock container. Sets cols and gap between clock sections-->
-    <main id="clock-container">
+    <main>
+      <div class="input-container">
+        <!--Date input-->
+        <input
+          class="input"
+          type="date"
+          name="input-date"
+          id="input-date"
+          value="1914-12-20 08:30:45"
+        />
+        <!--Time input-->
+        <input class="input" type="time" name="input-time" id="input-time" />
+      </div>
+
       <!--days-->
-      <div class="background-squares-container">
-        <!--left side-->
-        <!-- background squares-->
-
-        <div class="squares-grid">
-          <div class="background-squares"></div>
-          <div class="background-squares"></div>
+      <div id="clock-container">
+        <div class="background-squares-container">
+          <!--left side-->
+          <!-- background squares-->
+          <div class="squares-grid">
+            <div class="background-squares"></div>
+            <div class="background-squares"></div>
+          </div>
+          <!--time-->
+          <p class="relative" id="days">1</p>
+          <p class="relative tab-name">Days</p>
+          <!--center line-->
+          <div class="middle-line">
+            <div></div>
+          </div>
         </div>
-        <!--time-->
-        <p class="relative" id="days">1</p>
-        <p class="relative tab-name">Days</p>
-
-        <!--center line-->
-        <div class="middle-line">
-          <div></div>
+        <!--hours-->
+        <div class="background-squares-container">
+          <!--left side-->
+          <!-- background squares-->
+          <div class="squares-grid">
+            <div class="background-squares"></div>
+            <div class="background-squares"></div>
+          </div>
+          <!--time-->
+          <p class="relative" id="hours">2</p>
+          <p class="relative tab-name">Hours</p>
+          <!--center line-->
+          <div class="middle-line">
+            <div></div>
+          </div>
         </div>
-      </div>
-
-      <!--hours-->
-      <div class="background-squares-container">
-        <!--left side-->
-        <!-- background squares-->
-
-        <div class="squares-grid">
-          <div class="background-squares"></div>
-          <div class="background-squares"></div>
+        <!--minutes-->
+        <div class="background-squares-container">
+          <!--left side-->
+          <!-- background squares-->
+          <div class="squares-grid">
+            <div class="background-squares"></div>
+            <div class="background-squares"></div>
+          </div>
+          <!--time-->
+          <p class="relative" id="minutes">3</p>
+          <p class="relative tab-name">Minutes</p>
+          <!--center line-->
+          <div class="middle-line">
+            <div></div>
+          </div>
         </div>
-        <!--time-->
-        <p class="relative" id="hours">2</p>
-        <p class="relative tab-name">Hours</p>
-
-        <!--center line-->
-        <div class="middle-line">
-          <div></div>
-        </div>
-      </div>
-
-      <!--minutes-->
-      <div class="background-squares-container">
-        <!--left side-->
-        <!-- background squares-->
-
-        <div class="squares-grid">
-          <div class="background-squares"></div>
-          <div class="background-squares"></div>
-        </div>
-        <!--time-->
-        <p class="relative" id="minutes">3</p>
-        <p class="relative tab-name">Minutes</p>
-
-        <!--center line-->
-        <div class="middle-line">
-          <div></div>
-        </div>
-      </div>
-      <!--seconds-->
-      <div class="background-squares-container">
-        <!--left side-->
-        <!-- background squares-->
-
-        <div class="squares-grid">
-          <div class="background-squares"></div>
-          <div class="background-squares"></div>
-        </div>
-        <!--time-->
-        <p class="relative" id="seconds">4</p>
-        <p class="relative tab-name">Seconds</p>
-
-        <!--center line-->
-        <div class="middle-line">
-          <div></div>
+        <!--seconds-->
+        <div class="background-squares-container">
+          <!--left side-->
+          <!-- background squares-->
+          <div class="squares-grid">
+            <div class="background-squares"></div>
+            <div class="background-squares"></div>
+          </div>
+          <!--time-->
+          <p class="relative" id="seconds">4</p>
+          <p class="relative tab-name">Seconds</p>
+          <!--center line-->
+          <div class="middle-line">
+            <div></div>
+          </div>
         </div>
       </div>
     </main>

@@ -9,7 +9,7 @@ body {
   background: linear-gradient(
     45deg,
     rgba(123, 44, 191, 1) 0%,
-    rgba(157, 78, 221, 1) 60%,
+    #9d4edd 60%,
     rgb(224, 224, 224) 100%
   );
   color: white;
@@ -17,7 +17,7 @@ body {
 
 #clock-container {
   position: relative;
-  border: 8px solid yellow;
+  border: 8px solid #ffff00;
   border-radius: 10px;
   display: grid;
   grid: auto / auto auto auto auto;
@@ -66,4 +66,17 @@ body {
 
 .tab-name {
   font-size: 0.75rem;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  background-color: #8edd4e;
+  border: 4px solid white;
+  border-radius: 10px;
+}
+
+input {
+  background-color: #8edd4e;
+  border: none;
 }
