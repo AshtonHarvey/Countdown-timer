@@ -1,4 +1,7 @@
-const timer = document.getElementById("timer");
+const counterDays = document.getElementById("days");
+const counterHours = document.getElementById("hours");
+const counterMinutes = document.getElementById("minutes");
+const counterSeconds = document.getElementById("seconds");
 const timerDirection = document.getElementById("timer-direction");
 
 //store time till date as milliseconds
@@ -26,10 +29,13 @@ let t = setInterval(() => {
     hours *= -1;
     minutes *= -1;
     seconds *= -1;
-
-    timerDirection.innerHTML = " Times UP!";
   }
 
   //Display results in place holder element
+  counterDays.innerHTML = `${days}`;
+  counterHours.innerHTML = `${hours}`;
+  counterMinutes.innerHTML = `${minutes}`;
+  counterSeconds.innerHTML = `${seconds}`;
+  console.log(`${days}`);
   timer.innerHTML = `days ${days} hours ${hours} minutes ${minutes} seconds ${seconds}`;
 }, 1000);
