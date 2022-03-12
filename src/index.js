@@ -37,5 +37,4 @@ let t = setInterval(() => {
   counterMinutes.innerHTML = `${minutes}`;
   counterSeconds.innerHTML = `${seconds}`;
   console.log(`${days}`);
-  timer.innerHTML = `days ${days} hours ${hours} minutes ${minutes} seconds ${seconds}`;
 }, 1000);
