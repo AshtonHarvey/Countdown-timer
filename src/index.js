@@ -2,7 +2,6 @@ const counterDays = document.getElementById("days");
 const counterHours = document.getElementById("hours");
 const counterMinutes = document.getElementById("minutes");
 const counterSeconds = document.getElementById("seconds");
-const timerDirection = document.getElementById("timer-direction");
 const inputDate = document.getElementById("input-date");
 const inputTime = document.getElementById("input-time");
 
